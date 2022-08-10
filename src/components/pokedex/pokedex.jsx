@@ -1,5 +1,6 @@
 import { Pokemon } from "../pokemon/pokemon";
 import { Pagination } from "../pages/pagination";
+import {LoadingGif} from '../Loading/loadinggif'
 
 
 function Pokedex (props) {
@@ -27,9 +28,7 @@ function Pokedex (props) {
                     onRightClick={nextPage}
                 />
             </div>
-                {loading ? (<div className="spinner-border text-warning" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </div>):
+                {loading ? <LoadingGif/>:
                 (<section className = "m-3 ">
                 <div className = "pokedex-grid">
                     {/* Estructura base */ }
