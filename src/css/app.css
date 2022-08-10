@@ -314,6 +314,13 @@ footer {
     }
 }
 
+.loadingGif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 #bckgd-img {
     display: flex;
     justify-content: center;
