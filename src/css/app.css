@@ -5,12 +5,9 @@
     
 }
 
-html {
-    background-color: #000000;
-}
 
 .App {
-    background-color: #000000;
+    background-color: #30336b;
     position: relative;
     width: 100vw;
 }
@@ -49,12 +46,21 @@ nav {
 }
 
 .card-img-top {
+    display: flex;
     background: linear-gradient(rgb(248, 113, 113), rgb(209, 213, 219), rgb(59, 130, 246));
     z-index: 10;
+    min-width: 100%;
+    min-height: 12em;
+    justify-content: center;
+    align-items: center;
     border-radius: 7px;
 }
 
 .card-img {
+    max-width: 100%;
+    max-height: 8em;
+    justify-content: center;
+    align-items: center;
     animation: slide-top 1s ease-in-out 1s infinite alternate forwards;
 }
 
@@ -235,7 +241,7 @@ footer {
     .pokedex-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        row-gap: 2.2rem;
+        row-gap: 2.6rem;
         column-gap: .1rem;
     }
 
@@ -302,8 +308,90 @@ footer {
     .pokedex-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        row-gap: 8rem;
+        row-gap: 1rem;
         column-gap: 2em;
         padding-left: .2em;
     }
+}
+
+#bckgd-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10em;
+    border-radius: 10px;
+}
+
+.grass{
+    background-color: #74CB48;
+}
+.water{
+    background-color: #6493EB;
+}
+.fire{
+    background-color: #F57D31;
+}
+.electric{
+    background-color: #F9CF30;
+}
+.psychic{
+    background-color: #FB5584;
+}
+.poison{
+    background-color: #A43E9E;
+}
+.bug {
+    background-color: #A7B723;
+}
+.flying{
+    background-color: #A891EC;
+}
+.fighting{
+    background-color: #C12239;
+}
+.normal{
+    background-color: #AAA67F;
+}
+.rock{
+    background-color: #B69E31;
+}
+.ground{
+    background-color: #DEC16B;
+}
+.ghost{
+    background-color: #7f65aa;
+}
+.dark{
+    background-color: #75574C;
+}
+.steel{
+    background-color: #B7B9D0;
+}
+.fairy{
+    background-color: #E69EAC;
+}
+.dragon{
+    background-color: #7037FF;
+}
+.ice {
+    background-color: #9AD6DF;
+}
+.unknown{
+    background-color: #D8D8D8;
+}  
+
+/*grayscale*/
+
+.black{
+    background-color: #212121;
+}
+.mediumGray{
+    background-color: #666666;
+}
+.lightGray{
+    background-color: #E0E0E0;
+}
+.white{
+    background-color: #FFFFFF;
 }
