@@ -10,7 +10,7 @@ export const Searchbar = (props) => {
 
 
     const keyword = (e) => {
-        setSearch(e.target.name.value);
+        setSearch(e.target.value.toLowerCase());
         if (e.target.value.length === 0) {
             onSearch(null);
         }
