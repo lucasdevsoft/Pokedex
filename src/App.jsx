@@ -75,7 +75,7 @@ function App() {
     <div className="App">
     <Logo />
         <Searchbar onSearch={onSearch} />
-        {notFound ? (<div class="card-body">
+        {notFound ? (<div class="card-body m-3">
   <h2><span class="card-title">Pokemon Not Found...</span></h2>
 </div>)
         :  (
