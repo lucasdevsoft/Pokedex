@@ -6,9 +6,8 @@ export const Pokemon = (props) => {
 
     return (
         <>
-            <div className="m-3">
-            <div id="card" className="card">
-                <div id="bckgd-img" className={`${pokemon.types[0].type.name}`}>
+            <div id="card" className={`${pokemon.types[0].type.name}`}>
+                <div id="bckgd-img">
                     <img src={pokemon.sprites.other.dream_world.front_default} className="card-img" alt={pokemon.name} />
                 </div>
                     <div id="card-body" className="card-body ">
@@ -25,7 +24,6 @@ export const Pokemon = (props) => {
                     </div>
                 </div>
             </div>    
-            </div>
         </>
 
         
