@@ -17,7 +17,7 @@ export const Pokemon = (props) => {
                             <div className='card-type'>
                                 {
                                     pokemon.types.map((type, idx) => {
-                                        return <div className='pokemon-type btn btn-info' key={idx}><h6 className='title-type'>{type.type.name}</h6></div>
+                                        return <div id="pokemon-type" className={`${type.type.name}`} key={idx}><h6 className='title-type'>{type.type.name}</h6></div>
                                     })
                                 }
                             </div>
