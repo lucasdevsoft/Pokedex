@@ -13,6 +13,7 @@ export const Searchbar = (props) => {
         setSearch(e.target.value.toLowerCase());
         if (e.target.value.length === 0) {
             onSearch(null);
+            console.log(search);
         }
     };
 
