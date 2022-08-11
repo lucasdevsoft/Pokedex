@@ -1,4 +1,4 @@
-
+import Swal from "sweetalert2";
 
 export const searchPokemon = async (pokemon) => {
     try {
@@ -6,10 +6,17 @@ export const searchPokemon = async (pokemon) => {
         const response = await fetch(url);
         const data = await response.json();
         return data;
-    } catch (err) { }
+    } catch (err) {
+        Swal.fire({
+            title: 'Pokemon does not exist!',
+            text: 'Try another name :(',
+            icon: 'error',
+            confirmButtonText: 'Close'
+        })
+}
 };
 
-export const getPokemons = async (limit=24, offset=0) => {
+export const getPokemons = async (limit=25, offset=0) => {
     try {
         let url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
         const response = await fetch(url);

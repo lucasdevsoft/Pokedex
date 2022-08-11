@@ -20,6 +20,17 @@ function Pokedex (props) {
 
     return (
         <>
+                {loading ? <LoadingGif/>:
+                (<section className = "m-3 ">
+                <div className = "pokedex-grid">
+                    {/* Estructura base */ }
+                    {
+                        pokemons.map((pokemon, idx) => {
+                        return <Pokemon pokemon={pokemon} key={idx} />
+                    })}
+                </div>
+                </section >
+                )}
             <div className="div-pagination">
                 <Pagination
                     page={page + 1}
@@ -28,17 +39,6 @@ function Pokedex (props) {
                     onRightClick={nextPage}
                 />
             </div>
-                {loading ? <LoadingGif/>:
-                (<section className = "m-3 ">
-                <div className = "pokedex-grid">
-                    {/* Estructura base */ }
-                    {
-                        pokemons.map((pokemon, idx) => {
-                        return <Pokemon pokemon={pokemon} key={pokemon.name} />
-                    })}
-                </div>
-                </section >
-                )}
         </>
     )
 }

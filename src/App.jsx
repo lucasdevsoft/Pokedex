@@ -4,7 +4,7 @@ import { Searchbar } from './components/search/searchbar'
 import Pokedex from './components/pokedex/pokedex'
 import Logo from './components/logo/logo';
 import Footer from './components/footer/footer';
-
+import Swal from 'sweetalert2';
 
 import './css/app.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,14 +24,14 @@ function App() {
 
   const fetchPokemons = async () => {
     try {
-      const data = await getPokemons(25, 25 * page);
+      const data = await getPokemons(18, 18 * page);
       const promises = data.results.map(async (pokemon) => {
         return await getPokemonData(pokemon.url)
       });
       const results = await Promise.all(promises);
       setPokemons(results);
       setLoading(false);
-      setTotal(Math.ceil(data.count / 25));
+      setTotal(Math.ceil(data.count / 18));
       setNotFound(false);
     } catch (err) {
       console.log('no se pudo cargar');
@@ -75,9 +75,11 @@ function App() {
     <div className="App">
     <Logo />
         <Searchbar onSearch={onSearch} />
-        {notFound ? (<div class="card-body m-3">
-  <h2><span class="card-title">Pokemon Not Found...</span></h2>
-</div>)
+        {notFound ? (<Pokedex loading={loading}
+          pokemons={pokemons}
+          page={page}
+          setPage={setPage}
+          total={total} />)
         :  (
             <Pokedex
             loading={loading}

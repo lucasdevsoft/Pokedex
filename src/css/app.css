@@ -8,7 +8,7 @@
 
 .App {
     background-image: url(https://live.staticflickr.com/65535/52276737187_2cb8e0d366_b.jpg);
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -138,8 +138,7 @@ nav {
 
 .div-pagination {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 3em;
+    justify-content: center;
 }
 
 .pagination {
@@ -149,6 +148,7 @@ nav {
     justify-content: center;
     padding: .5em;
     margin: .5em;
+    margin-bottom: 2em;
 }
 .btn-pag {
     background-color: transparent;
@@ -156,15 +156,19 @@ nav {
 }
 
 .highlight {
-    color: #14171e;
+    color: #F57D31;
     font-size: 2.5em;
     border: none;
 }
 
 .pags {
-    color: #f1f2f6;
-    font-size: 1.1em;
-    padding: 0 5px;
+    background-color: #F57D31;
+    color: #F1F2F6;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 0 6px;
+    margin: 0 4px;
+    border-radius: 10px;
 }
 
 
@@ -179,17 +183,19 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 6rem;
+    margin-top: 1rem;
 }
 
 .in-footer {
-    color: #f1f2f6;
-    padding-bottom: 2em;
+    background-color: #2121215a;
+    color: #FFCB05;
+    padding: .5em;
+    border-radius: 10px;
 }
 
 .in-footer a {
     text-decoration: none;
-    color: #f1f2f6;
+    color: #FFCB05;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -299,7 +305,7 @@ footer {
 
     #card {
         width: 10em;
-        height: 12em;
+        height: 14em;
     }
 
     .div-pagination {
@@ -328,7 +334,7 @@ footer {
 
     #card {
         width: 10em;
-        height: 12em;
+        height: 14em;
     }
 
     .div-pagination {
@@ -349,6 +355,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
 }
 
 #bckgd-img {
