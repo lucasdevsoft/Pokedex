@@ -4,7 +4,7 @@ import { Searchbar } from './components/search/searchbar'
 import Pokedex from './components/pokedex/pokedex'
 import Logo from './components/logo/logo';
 import Footer from './components/footer/footer';
-import { LoadingGif } from '../Loading/loadinggif'
+
 
 import './css/app.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -75,7 +75,9 @@ function App() {
     <div className="App">
     <Logo />
         <Searchbar onSearch={onSearch} />
-        {notFound ? <LoadingGif />
+        {notFound ? (<div class="spinner-border text-warning" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>)
         :  (
             <Pokedex
             loading={loading}
