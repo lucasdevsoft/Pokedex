@@ -75,8 +75,8 @@ function App() {
     <div className="App">
     <Logo />
         <Searchbar onSearch={onSearch} />
-        {notFound ? (<div class="spinner-border text-warning" role="status">
-  <span class="visually-hidden">Loading...</span>
+        {notFound ? (<div class="card-body">
+  <h2><span class="card-title">Pokemon Not Found...</span></h2>
 </div>)
         :  (
             <Pokedex
