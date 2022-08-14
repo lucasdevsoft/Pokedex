@@ -190,7 +190,7 @@ footer {
 
 .in-footer {
     background-color: #2121215a;
-    color: #FFCB05;
+    color: #f5f6fa;
     padding: .5em;
     border-radius: 10px;
 }
@@ -202,15 +202,15 @@ footer {
 }
 
 
-.in-footer a:active {
+.in-footer a:hover {
     color: #e84118;
 }
 
-.in-footer fa-github {
+.in-footer a fa-github {
    transition: transform 0.3s ease-in-out; 
 }
 
-.in-footer fa-github:hover  {
+.in-footer a fa-github:hover  {
    transform: rotate(360deg) scale(1.2); 
 }
 
