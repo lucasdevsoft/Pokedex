@@ -4,13 +4,11 @@ import { Searchbar } from './components/search/searchbar'
 import Pokedex from './components/pokedex/pokedex'
 import Logo from './components/logo/logo';
 import Footer from './components/footer/footer';
-import Swal from 'sweetalert2';
 
 import './css/app.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-
 
   const [pokemons, setPokemons] = useState([]);
   const [page, setPage] = useState(0);
@@ -18,9 +16,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [searching, setSearching] = useState(false);
-
-
-
+  
 
   const fetchPokemons = async () => {
     try {
@@ -37,6 +33,7 @@ function App() {
       console.log('no se pudo cargar');
     }
   };
+
 
   useEffect(() => {
     fetchPokemons();
@@ -69,6 +66,8 @@ function App() {
     setLoading(false);
     setSearching(false);
   };
+
+  
 
   return (
     <>

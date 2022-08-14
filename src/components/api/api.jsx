@@ -10,7 +10,6 @@ export const searchPokemon = async (pokemon) => {
         Swal.fire({
             title: 'Pokemon does not exist!',
             text: 'Try another name :(',
-            icon: 'error',
             confirmButtonText: 'Close'
         })
 }
