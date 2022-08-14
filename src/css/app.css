@@ -197,13 +197,21 @@ footer {
 
 .in-footer a {
     text-decoration: none;
-    color: #FFCB05;
-    transition: transform 0.3s ease-in-out;
+    color: #f5f6fa;
+    
 }
 
 
-.in-footer a:hover {
-    transform: rotate(360deg) scale(1.2);
+.in-footer a:active {
+    color: #e84118;
+}
+
+.in-footer fa-github {
+   transition: transform 0.3s ease-in-out; 
+}
+
+.in-footer fa-github:hover  {
+   transform: rotate(360deg) scale(1.2); 
 }
 
 .pokedex-grid {
